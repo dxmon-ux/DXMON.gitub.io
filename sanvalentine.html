@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿QUIERES SER MI SAN VALENTIN?</title>
+    <style>
+        body {
+            text-align: center;
+            background: rgb(240, 0, 0);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .container {
+            margin-top: 10vh;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            position: relative;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .yes {
+            background-color: #fe0000;
+            color: white;
+        }
+        .no {
+            background-color: #555;
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+        .emojis {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿QUIERES SER MI SAN VALENTIN? ❤️</h1>
+        <div class="buttons">
+            <button class="yes" onclick="showLove()">Sí</button>
+            <button class="no" onclick="showSad()">No</button>
+        </div>
+        <div id="response" class="hidden">
+            <h2 id="message"></h2>
+            <div id="emojis" class="emojis"></div>
+        </div>
+    </div>
+    <div class="image-container">
+        <img <img src="https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-cat-on-white-background-png-image_7094927.png" alt="Gato de prueba">
+    </div>
+
+    <script>
+        function showLove() {
+            document.getElementById('message').innerText = 'No te arrepentirás ❤️';
+            document.getElementById('emojis').innerText = '❤️❤️❤️❤️❤️';
+            document.getElementById('response').classList.remove('hidden');
+        }
+        function showSad() {
+            document.getElementById('message').innerText = 'Oh no 😢';
+            document.getElementById('emojis').innerText = '😢😢😢😢😢';
+            document.getElementById('response').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
